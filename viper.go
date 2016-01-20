@@ -33,7 +33,7 @@ import (
 
 	"github.com/kr/pretty"
 	"github.com/mitchellh/mapstructure"
-	"github.com/spf13/cast"
+	"github.com/jabbahotep/cast"
 	jww "github.com/spf13/jwalterweatherman"
 	"github.com/spf13/pflag"
 	"gopkg.in/fsnotify.v1"
@@ -592,6 +592,12 @@ func (v *Viper) GetStringMapString(key string) map[string]string {
 func GetStringMapStringSlice(key string) map[string][]string { return v.GetStringMapStringSlice(key) }
 func (v *Viper) GetStringMapStringSlice(key string) map[string][]string {
 	return cast.ToStringMapStringSlice(v.Get(key))
+}
+
+// Returns the value associated with slice of maps of strings
+func GetSliceStringMapString(key string) []map[string]string { return v.GetSliceStringMapString(key) }
+func (v *Viper) GetSliceStringMapString(key string) []map[string]string {
+	return cast.ToSliceStringMapString(v.Get(key))
 }
 
 // Returns the size of the value associated with the given key

@@ -24,7 +24,7 @@ import (
 	"github.com/BurntSushi/toml"
 	"github.com/hashicorp/hcl"
 	"github.com/magiconair/properties"
-	"github.com/spf13/cast"
+	"github.com/jabbahotep/cast"
 	jww "github.com/spf13/jwalterweatherman"
 	"gopkg.in/yaml.v2"
 )
