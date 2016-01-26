@@ -600,6 +600,12 @@ func (v *Viper) GetSliceStringMapString(key string) []map[string]string {
 	return cast.ToSliceStringMapString(v.Get(key))
 }
 
+// Returns the value associated with slice of maps of interfaces
+func GetSliceStringMap(key string) []map[string]interface{} { return v.GetSliceStringMap(key) }
+func (v *Viper) GetSliceStringMap(key string) []map[string]interface{} {
+	return cast.ToSliceStringMap(v.Get(key))
+}
+
 // Returns the size of the value associated with the given key
 // in bytes.
 func GetSizeInBytes(key string) uint { return v.GetSizeInBytes(key) }
