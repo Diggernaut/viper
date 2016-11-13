@@ -33,7 +33,7 @@ import (
 
 	"github.com/kr/pretty"
 	"github.com/mitchellh/mapstructure"
-	"github.com/jabbahotep/cast"
+	"github.com/Diggernaut/cast"
 	jww "github.com/spf13/jwalterweatherman"
 	"github.com/spf13/pflag"
 	"gopkg.in/fsnotify.v1"
